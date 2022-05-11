@@ -6,26 +6,16 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:33:41 by thome             #+#    #+#             */
-/*   Updated: 2022/05/10 18:07:32 by thome            ###   ########.fr       */
+/*   Updated: 2022/05/11 16:30:13 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isapha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
 
-	i = 0;
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
-	while (str[i])
-	{
-		if ((str[i] >= 'A' && str[i] <= 'Z') 
-				|| (str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-	else
-		return (0);
-	}
-	return (1);
+	if ( ((unsigned char)c  >= 'A' &&  (unsigned char)c <= 'Z') 
+			|| ((unsigned char)c >= 'a' &&  (unsigned char)c <= 'z'))
+			return (1);
+	return (0);
 }
+
