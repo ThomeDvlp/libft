@@ -5,6 +5,7 @@ int ft_isdigit(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
+int ft_strlen(const char *s);
 
 int main(void)
 {
@@ -33,5 +34,7 @@ int main(void)
 	printf("ft_isprint(num) = %d\n", ft_isprint(num));
 	printf("ft_isprint(alpha) = %d\n", ft_isprint(alpha));
 	printf("ft_isprint(aoutAscii) = %d\n\n", ft_isprint(outascii));
+
+	printf("ft_strlen(0123456789) = %d\n", ft_strlen("0123456789"));
 }
 
