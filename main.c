@@ -6,15 +6,16 @@ int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
 int ft_strlen(const char *s);
+void *ft_memset(void *s, int c, int m);
 
 int main(void)
 {
-    int num = '2';
-    int alpha = 'a';
+	int num = '2';
+	int alpha = 'a';
 
 	printf("num = 2 \nalpha = a\n\n");
-    printf("ft_isalpha(alpha) = %d\n", ft_isalpha(alpha));
-    printf("ft_isalpha(num) = %d\n\n", ft_isalpha(num));
+ 	printf("ft_isalpha(alpha) = %d\n", ft_isalpha(alpha));
+ 	printf("ft_isalpha(num) = %d\n\n", ft_isalpha(num));
 	printf("ft_isdigit(num) = %d\n", ft_isdigit(num));
 	printf("ft_isdigit(alpha) = %d\n\n", ft_isdigit(alpha));
 	printf("ft_isalnum(num) = %d\n", ft_isalnum(num));
@@ -35,6 +36,11 @@ int main(void)
 	printf("ft_isprint(alpha) = %d\n", ft_isprint(alpha));
 	printf("ft_isprint(aoutAscii) = %d\n\n", ft_isprint(outascii));
 
-	printf("ft_strlen(0123456789) = %d\n", ft_strlen("0123456789"));
+	printf("ft_strlen(0123456789) = %d\n\n", ft_strlen("0123456789"));
+	
+	printf("ft_memset(frase que eu quero mudar, $, 5) =  %p\n", ft_memset("frase que eu quero mudar", '$', 5));
+#include <stddef.h>
+	
+	
 }
 
