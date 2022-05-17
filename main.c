@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -37,10 +38,12 @@ int main(void)
 	printf("ft_isprint(aoutAscii) = %d\n\n", ft_isprint(outascii));
 
 	printf("ft_strlen(0123456789) = %d\n\n", ft_strlen("0123456789"));
+
+	char str[50] = "This is the memset test string";
 	
-	printf("ft_memset(frase que eu quero mudar, $, 5) =  %p\n", ft_memset("frase que eu quero mudar", '$', 5));
-#include <stddef.h>
-	
-	
+	printf("\nBefore ft_memset() str =  %s\n", str);
+
+	ft_memset(str + 5, '*', 11);
+	printf("\nAfter memset(str, '*', 11)) str = %s\n ", str); 	
 }
 
