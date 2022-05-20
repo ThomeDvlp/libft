@@ -7,7 +7,7 @@ int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
 int ft_strlen(const char *s);
-void *ft_memset(void *s, int c, int m);
+void *ft_memset(void *s, int c, size_t m);
 
 int main(void)
 {
@@ -43,7 +43,7 @@ int main(void)
 	
 	printf("\nBefore ft_memset() str =  %s\n", str);
 
-	ft_memset(str + 5, '*', 11);
-	printf("\nAfter memset(str, '*', 11)) str = %s\n ", str); 	
+	ft_memset(str + 7, '*', 12);
+	printf("\nAfter memset(str + 7, '*', 12)) str = %s\n", str); 	
 }
 

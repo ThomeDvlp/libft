@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 17:33:41 by thome             #+#    #+#             */
-/*   Updated: 2022/05/20 11:31:48 by rthome-d         ###   ########.fr       */
+/*   Created: 2022/05/18 11:03:51 by rthome-d          #+#    #+#             */
+/*   Updated: 2022/05/18 12:48:18 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
+#ifndef LIBFT_H_INCLUDED
+# define LIBFT_H_INCLUDED
 
-	if ( (c  >= 65 &&  c <= 90) 
-			|| (c >= 97 &&  c <= 122))
-			return (1);
-	return (0);
-}
+# include <stdlib.h>
 
+int		ft_isalph(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int 	ft_isprint(int c);
+int 	ft_strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t m);
+
+
+#endif // LIBFT_H_INCLUDED
