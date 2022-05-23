@@ -1,25 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 12:08:39 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/05/20 12:20:20 by rthome-d         ###   ########.fr       */
+/*   Created: 2022/05/23 15:39:21 by rthome-d          #+#    #+#             */
+/*   Updated: 2022/05/23 15:51:28 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-void	ft_bzero(void *s, size_t n)
+
+size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	char *p;
-
-	p = s;
-
-	while(n > 0)
-	{
-		*p = 0;
-		p++;
-		n--;
-	}
-}
+	
