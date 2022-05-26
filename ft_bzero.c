@@ -6,20 +6,12 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 12:08:39 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/05/20 12:20:20 by rthome-d         ###   ########.fr       */
+/*   Updated: 2022/05/26 15:33:39 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	char *p;
-
-	p = s;
-
-	while(n > 0)
-	{
-		*p = 0;
-		p++;
-		n--;
-	}
+	ft_memset(s, 0, n);
 }
