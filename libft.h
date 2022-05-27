@@ -6,7 +6,7 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:03:51 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/05/27 14:19:00 by rthome-d         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:18:39 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
 size_t	ft_strlcpy(char*restrict dst, const char*restrict src, size_t dstsize);
 size_t	ft_strlcat(char*restrict dst, const char*restrict src, size_t dstsize);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char*s, int c);
+char	*ft_strrchr(const char*s, int c);
 
 #endif // LIBFT_H_INCLUDED
