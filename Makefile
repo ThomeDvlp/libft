@@ -40,6 +40,10 @@ clean:
 fclean:		clean
 	rm -f ${NAME}	
 	
+so:
+	$(CC) -fPIC $(FLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
+
 re:		fclean all	
-	
+
 .PHONY:	all clean fclean re
