@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 15:13:45 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/06 16:07:22 by thome            ###   ########.fr       */
+/*   Created: 2022/06/08 18:46:05 by rthome-d          #+#    #+#             */
+/*   Updated: 2022/06/08 19:00:03 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_atoi(char *str)
 {
-	size_t	i;
+	int	res;
+	int	i;
 
-	i = 0;
-	while (i < n)
+	i = 0;	
+	res = 0
+	while(*str++)
 	{
-		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
-			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
-	return (0);
+	return (res);
 }

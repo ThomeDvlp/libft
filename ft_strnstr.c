@@ -6,7 +6,7 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 11:01:21 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/06 11:28:32 by rthome-d         ###   ########.fr       */
+/*   Updated: 2022/06/06 16:10:32 by thome            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 char	*ft_strnstr(const char*big, const char*little, size_t len)
 {
-	size_t	big_offset;
-	size_t	little_offset;
+	size_t	offset_bg;
+	size_t	offset_lt;
 
-	big_offset = 0;
-	if(!little)
+	offset_bg = 0;
+	if (!little)
 		return ((char *)big);
-	while(big[big_offset] && big_offset < len)
+	while (big[offset_bg] && offset_bg < len)
 	{
-		little_offset =  0;
-		if(big[big_offset] == little[little_offset])
+		offset_lt = 0;
+		while (big[offset_bg] && little[offset_lt]
+			&& big[offset_bg + offset_lt]
+			== little[offset_lt]
+			&& offset_bg + offset_lt < len)
 		{
-			while(big[big_offset++] == little[little_offset++])
-			{
-				if(little_offset == (size_t *)ft_strlen(little_offset)
-					return ((char *)big[big_offset]
-			}
-		
-
+			if (!little[offset_lt + 1])
+				return ((char *)big + offset_bg);
+			offset_lt++;
 		}
+		offset_bg++;
+	}
 	return (NULL);
 }		
