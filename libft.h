@@ -6,7 +6,7 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:03:51 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/08 19:03:44 by thome            ###   ########.fr       */
+/*   Updated: 2022/06/09 13:35:33 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int		ft_strncmp(const char*s1, const char*s2, size_t n);
 void	*ft_memchr(const void*s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char*big, const char*little, size_t len);
-int	*
+int		ft_atoi(char *str);
+
 #endif // LIBFT_H_INCLUDED

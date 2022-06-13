@@ -6,23 +6,23 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 18:46:05 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/08 19:00:03 by rthome-d         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:54:14 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	res;
-	int	i;
+	int	ret;
+	int neg;
 
-	i = 0;	
-	res = 0
-	while(*str++)
+	res = 0;
+	neg = 1;	
+	while()
 	{
-		res = res * 10 + str[i] - '0';
+		ret = ret * 10 + str[i] - '0';
 		i++;
 	}
-	return (res);
+	return (ret);
 }
