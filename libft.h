@@ -6,7 +6,7 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:03:51 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/08 19:03:44 by thome            ###   ########.fr       */
+/*   Updated: 2022/06/11 19:13:15 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
+int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t m);
@@ -33,5 +34,10 @@ int		ft_strncmp(const char*s1, const char*s2, size_t n);
 void	*ft_memchr(const void*s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char*big, const char*little, size_t len);
-int	*
+int		ft_atoi(const char *str);
+char	*ft_strdup(const char *str);
+void	*ft_calloc(size_t num, size_t size);
+char	*ft_substr(const char *src, unsigned int start, size_t len);
+char	*ft_strjoin(char const *str1, char const *str2);
+
 #endif // LIBFT_H_INCLUDED
