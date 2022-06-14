@@ -6,13 +6,14 @@
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:03:51 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/11 19:13:15 by rthome-d         ###   ########.fr       */
+/*   Updated: 2022/06/13 22:52:14 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -39,5 +40,8 @@ char	*ft_strdup(const char *str);
 void	*ft_calloc(size_t num, size_t size);
 char	*ft_substr(const char *src, unsigned int start, size_t len);
 char	*ft_strjoin(char const *str1, char const *str2);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif // LIBFT_H_INCLUDED
