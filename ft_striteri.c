@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthome-d <rthome-d@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 13:54:52 by rthome-d          #+#    #+#             */
-/*   Updated: 2022/06/14 13:03:27 by rthome-d         ###   ########.fr       */
+/*   Created: 2022/06/16 15:51:56 by rthome-d          #+#    #+#             */
+/*   Updated: 2022/06/16 17:29:18 by rthome-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	s_len;
-	size_t	d_len;
-	size_t	offset;
-	size_t	i;
+	int		index;
 
-	s_len = ft_strlen(src);
-	d_len = ft_strlen(dst);
-	offset = d_len;
-	i = 0;
-	if (dstsize <= d_len)
-		return (dstsize + s_len);
-	while (src[i] && d_len + i < dstsize - 1)
+	index = 0;
+	while (s[index])
 	{
-		dst[i + offset] = src[i];
-		i++;
+		f(index, &s[index]);
+		index++;
 	}
-	dst[i + offset] = 0;
-	return (d_len + s_len);
 }
